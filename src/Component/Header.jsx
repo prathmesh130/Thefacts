@@ -21,7 +21,7 @@ export default function
     }
     const smallwindowScreen = () => {
         return (
-            <button className="button-85" role="button" onClick={() => { setShare(prev => !prev) }}>
+            <button className="button-23" role="button" onClick={() => { setShare(prev => !prev) }}>
                 {!share ? <>Share</> : <>Close</>}
             </button>
         )
@@ -31,7 +31,11 @@ export default function
     }, [window.screen.width])
     return (
         <div className='heading'>
-            <h1>Todays Fact</h1>
+            <div className='head'>
+                <img src="https://img.icons8.com/dusk/64/null/labels.png" />
+                <h1>
+                    Todays Fact</h1>
+            </div>
             {window.screen.width < 600 ? smallwindowScreen() : windowScreen()}
         </div>
     )

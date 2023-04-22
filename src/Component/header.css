@@ -5,6 +5,16 @@
   margin: 10px 70px;
 }
 
+.head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.head img {
+  margin-right: 10px;
+}
+
 h1 {
   font-size: 30px;
   text-transform: uppercase;
@@ -66,73 +76,52 @@ button:active {
   }
 }
 
+
 /* CSS */
-.button-85 {
-  padding: 0.6em 2em;
-  border: none;
-  outline: none;
-  color: rgb(255, 255, 255);
-  background: #44403c;
+.button-23 {
+  background-color: #FFFFFF;
+  border: 1px solid #222222;
+  border-radius: 30px;
+  box-sizing: border-box;
+  color: #222222;
   cursor: pointer;
+  display: inline-block;
+  font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+  /* line-height: 20px; */
+  margin: 0;
+  outline: none;
+  /* padding: 5px 23px; */
   position: relative;
-  z-index: 0;
-  border-radius: 10px;
+  text-align: center;
+  text-decoration: none;
+  touch-action: manipulation;
+  transition: box-shadow .2s, -ms-transform .1s, -webkit-transform .1s, transform .1s;
   user-select: none;
   -webkit-user-select: none;
-  touch-action: manipulation;
+  width: 50px;
+  height: 20px;
 }
 
-.button-85:before {
-  content: "";
-  background: linear-gradient(45deg,
-      #ff0000,
-      #ff7300,
-      #fffb00,
-      #48ff00,
-      #00ffd5,
-      #002bff,
-      #7a00ff,
-      #ff00c8,
-      #ff0000);
-  position: absolute;
-  top: -2px;
-  left: -2px;
-  background-size: 400%;
-  z-index: -1;
-  filter: blur(5px);
-  -webkit-filter: blur(5px);
-  width: calc(100% + 4px);
-  height: calc(100% + 4px);
-  animation: glowing-button-85 20s linear infinite;
-  transition: opacity 0.3s ease-in-out;
-  border-radius: 10px;
+.button-23:focus-visible {
+  box-shadow: #222222 0 0 0 2px, rgba(255, 255, 255, 0.8) 0 0 0 4px;
+  transition: box-shadow .2s;
 }
 
-@keyframes glowing-button-85 {
-  0% {
-    background-position: 0 0;
-  }
-
-  50% {
-    background-position: 400% 0;
-  }
-
-  100% {
-    background-position: 0 0;
-  }
+.button-23:active {
+  background-color: #F7F7F7;
+  border-color: #000000;
+  transform: scale(.96);
 }
 
-.button-85:after {
-  z-index: -1;
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: #222;
-  left: 0;
-  top: 0;
-  border-radius: 10px;
+.button-23:disabled {
+  border-color: #DDDDDD;
+  color: #DDDDDD;
+  cursor: not-allowed;
+  opacity: 1;
 }
+
 
 @media only screen and (max-width: 600px) {
   .heading {
@@ -152,5 +141,10 @@ button:active {
     padding: 0.4em 0.5em;
     /* padding-left: 0.9em; */
     padding-left: 0.4em;
+  }
+
+  .head img {
+    width: 20px;
+    margin-right: 5px;
   }
 }
